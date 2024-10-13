@@ -20,7 +20,7 @@ public class Stack extends AbstractDataType {
         updateTextArea(textArea);
     }
     public int pop(JTextArea textArea)throws IsEmptyException{
-        isEmpty(this.top);
+        isEmpty(this.top, textArea);
         int data= top.getData();
         top = top.getNext();
         size--;
@@ -30,7 +30,7 @@ public class Stack extends AbstractDataType {
 
     @Override
     public void showData(JTextArea textArea) throws  IsEmptyException{
-        isEmpty(this.top);
+        isEmpty(this.top, textArea);
         StringBuilder stackStr= new StringBuilder();
         Node currentNode = this.top;
         while(currentNode!=null){
