@@ -12,22 +12,25 @@ public class Stack extends AbstractDataType {
         top = null;
         size = 0;
     }
-    public void push(JTextArea textArea, int data)throws IsEmptyException{
+    // This method add an item from the stack
+    @Override
+    public int addElement(JTextArea textArea, int data)throws IsEmptyException{
         Node newNode = new Node(data);
         newNode.setNext(top);
         top = newNode;
         size++;
         updateTextArea(textArea);
+        return data;
     }
-    public int pop(JTextArea textArea)throws IsEmptyException{
+    // This method deletes the first item from the stack
+    public void removeElement(JTextArea textArea)throws IsEmptyException{
         isEmpty(this.top, textArea);
         int data= top.getData();
         top = top.getNext();
         size--;
         updateTextArea(textArea);
-        return data;
     }
-
+    // Overrides the parent method and adds logic to display the structure's data
     @Override
     public void showData(JTextArea textArea) throws  IsEmptyException{
         isEmpty(this.top, textArea);

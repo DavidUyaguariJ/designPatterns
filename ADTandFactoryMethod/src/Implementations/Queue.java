@@ -14,7 +14,8 @@ public class Queue extends AbstractDataType {
         rear = null;
         size=0;
     }
-    public void enqueue(int data, JTextArea textArea) throws IsEmptyException {
+    @Override
+    public int addElement( JTextArea textArea, int data) throws IsEmptyException {
         Node newNode = new Node(data);
         if(front==null){
             front = newNode;
@@ -25,8 +26,10 @@ public class Queue extends AbstractDataType {
         }
         size++;
         updateTextArea(textArea);
+        return data;
     }
-    public int dequeue(JTextArea textArea) throws IsEmptyException {
+    @Override
+    public void removeElement(JTextArea textArea) throws IsEmptyException {
         isEmpty(front, textArea);
         int data = front.getData();
         front = front.getNext();
@@ -35,7 +38,6 @@ public class Queue extends AbstractDataType {
             rear = null;
         }
         updateTextArea(textArea);
-        return data;
     }
     @Override
     public void showData(JTextArea textArea) throws IsEmptyException{

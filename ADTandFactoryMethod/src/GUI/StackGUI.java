@@ -1,10 +1,14 @@
 package GUI;
 
+import AbstractClasses.AbstractDataType;
+import Creators.Creator;
 import Implementations.Stack;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import static Creators.Creator.structureStack;
 
 public class StackGUI {
     private JPanel pGeneral;
@@ -13,7 +17,8 @@ public class StackGUI {
     private JButton pushButton;
     private JButton popButton;
     private JLabel Element;
-    Stack stack1 = new Stack();
+    AbstractDataType newStack = Creator.StuctureCreator(structureStack);
+
     public StackGUI() {
         pushButton.addActionListener(new ActionListener(){
             @Override
@@ -21,7 +26,7 @@ public class StackGUI {
                 String element = txtElement.getText();
                 try{
                     int value = Integer.parseInt(element);
-                    stack1.push(textResponse,value);
+                    newStack.addElement(textResponse,value);
                     txtElement.setText("");
                     txtElement.grabFocus();
                 }catch (Exception ex){
@@ -33,7 +38,7 @@ public class StackGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    stack1.pop(textResponse);
+                    newStack.removeElement(textResponse);
                     txtElement.setText("");
                     txtElement.grabFocus();
                 }catch (Exception ex){
