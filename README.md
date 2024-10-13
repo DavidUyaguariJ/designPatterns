@@ -1,6 +1,6 @@
 # Patrones de diseño
 
-##Bienvenidos a mi repositorio, el objetivo de este repositorio es comprender como funcionan los patrones de diseño utilizando ejemplos que nos facilitarán la compresión de cada uno de los patrones.
+Bienvenidos a mi repositorio, el objetivo de este repositorio es comprender como funcionan los patrones de diseño utilizando ejemplos que nos facilitarán la compresión de cada uno de los patrones.
 
 ## Fuente: https://refactoring.guru/es/design-patterns/what-is-pattern
 Los patrones de diseño son soluciones habituales a problemas que ocurren con frecuencia en el diseño de software. 
@@ -37,4 +37,4 @@ Son como planos prefabricados que se pueden personalizar para resolver un proble
 -Template Method
 -Visitor
 
-###Nota: Sientete libre de colaborar con mi repositorio y de realizar cualquier comentario de mejora del mismo.
+Nota: Sientete libre de colaborar con mi repositorio y de realizar cualquier comentario de mejora del mismo.
