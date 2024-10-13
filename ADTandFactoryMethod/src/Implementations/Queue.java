@@ -27,7 +27,7 @@ public class Queue extends AbstractDataType {
         updateTextArea(textArea);
     }
     public int dequeue(JTextArea textArea) throws IsEmptyException {
-        isEmpty(front);
+        isEmpty(front, textArea);
         int data = front.getData();
         front = front.getNext();
         size--;
@@ -39,7 +39,7 @@ public class Queue extends AbstractDataType {
     }
     @Override
     public void showData(JTextArea textArea) throws IsEmptyException{
-        isEmpty(front);
+        isEmpty(front,textArea);
         StringBuilder queueStr= new StringBuilder();
         Node currentNode = front;
         while(currentNode!=null){

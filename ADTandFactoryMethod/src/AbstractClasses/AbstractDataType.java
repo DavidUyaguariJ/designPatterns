@@ -12,7 +12,10 @@ public abstract class AbstractDataType {
     public void updateTextArea(JTextArea textArea) throws IsEmptyException {
         showData(textArea);
     }
-    public void isEmpty (Node node) throws IsEmptyException{
-        if(node==null){throw new IsEmptyException("La estructura esta vacía");}
+    public void isEmpty (Node node, JTextArea textArea) throws IsEmptyException{
+        if(node==null){
+            textArea.setText("");
+            throw new IsEmptyException("La estructura esta vacía");
+        }
     };
 }
