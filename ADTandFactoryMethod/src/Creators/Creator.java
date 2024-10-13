@@ -6,7 +6,7 @@ import Implementations.Stack;
 
 public class Creator {
     public static int structureStack=1;
-    private static int structureQueue=2;
+    public static int structureQueue=2;
 
     public static AbstractDataType StuctureCreator(int Type){
         if(Type==1){
